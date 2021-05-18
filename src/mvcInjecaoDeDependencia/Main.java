@@ -9,6 +9,7 @@ public class Main {
 		Persistencia persCsv = new PersistenciaCsv();
 		Persistencia persJson = new PersistenciaJson();
 		Persistencia persXml = new PersistenciaXml();
+		Persistencia perBanco = new PersistenciaBanco();
 		
 		AlunoDto a = new AlunoDto(persCsv,"Julio Cesar", "1", "12345678910", "15/02/1997", "juliocswin@gmail.com");
 		AlunoBo abo = new AlunoBo();
@@ -27,6 +28,12 @@ public class Main {
 		System.out.println(cbo.create(c));
 		System.out.println(cbo.read(c));
 		System.out.println(c);
+		
+		AlunoDto d = new AlunoDto(persXml, "Juliana Cesar", "4", "12345678913", "18/02/1997", "julianacswin@gmail.com");
+		AlunoBo dbo = new AlunoBo();
+		System.out.println(dbo.create(d));
+		System.out.println(dbo.read(d));
+		System.out.println(d);
 	}
 
 }
